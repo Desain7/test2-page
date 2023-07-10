@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>大学物理</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+		}
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+			height: 100vh;
+			margin-top:100%;
+			padding-top: 110px;
+			/* background-color: #f2f2f2; */
+		}
+		.question {
+			margin-bottom: 15px;
+			padding: 15px;
+			border: 1px solid #ccc;
+			border-radius: 10px;
+			background-color: #fff;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		.question h3 {
+			margin: 0 0 10px;
+			font-size: 20px;
+			font-weight: bold;
+			color: #333;
+		}
+		.question p {
+			margin: 0 0 20px;
+			font-size: 16px;
+			color: #666;
+		}
+		.question label {
+			display: block;
+			margin-bottom: 10px;
+			font-size: 16px;
+			color: #333;
+		}
+		.question input[type="radio"] {
+			display: inline-block;
+			margin-right: 10px;
+		}
+		.question input[type="text"] {
+			display: block;
+			width: 100%;
+			margin-top: 10px;
+			padding: 5px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			box-sizing: border-box;
+			font-size: 16px;
+			color: #333;
+		}
+		.btn {
+			display: inline-block;
+			margin:5px 40%;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			background-color: #333;
+			color: #fff;
+			font-size: 16px;
+			cursor: pointer;
+		}
+		.result {
+			margin-top: 10px;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 10px;
+			background-color: #fff;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		.result h3 {
+			margin: 0 0 10px;
+			font-size: 20px;
+			font-weight: bold;
+			color: #333;
+		}
+		.result p {
+			margin: 0;
+			font-size: 16px;
+			color: #666;
+		}
+    .score{
+      color: red;
+    }
+		/* .question_content_dsc{
+			margin-top: 40px;
+		} */
+		.question2{
+			margin-bottom: 90px;
+			padding: 15px;
+			border: 1px solid #ccc;
+			border-radius: 10px;
+			background-color: #fff;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		.question3{
+			margin-top: 100%;
+			margin-bottom: 15px;
+			padding: 15px;
+			border: 1px solid #ccc;
+			border-radius: 10px;
+			background-color: #fff;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="question">
+
+			<h3>选择题 1</h3>
+			<p>在自由落体运动中，一个物体下落2秒后的速度是10 m/s，下落的距离是多少？</p>
+			<label><input type="radio" name="q1" value="A">A. 20 m</label>
+			<label><input type="radio" name="q1" value="B">B. 30 m</label>
+			<label><input type="radio" name="q1" value="C">C. 40 m</label>
+			<label><input type="radio" name="q1" value="D">D.  50 m</label>
+
+      <h3>选择题 2</h3>
+			<p>以下哪个单位不属于功的单位？</p>
+			<label><input type="radio" name="q2" value="A">A. 焦耳 (J)</label>
+			<label><input type="radio" name="q2" value="B">B. 牛顿米 (N·m)</label>
+			<label><input type="radio" name="q2" value="C">C. 瓦特 (W)</label>
+			<label><input type="radio" name="q2" value="D">D. 千瓦时 (kWh)</label>
+
+			<h3>选择题 3</h3>
+			<p>光的折射定律是由哪位科学家提出的？</p>
+			<label><input type="radio" name="q3" value="A">A. 伽利略</label>
+			<label><input type="radio" name="q3" value="B">B. 亨利</label>
+			<label><input type="radio" name="q3" value="C">C. 赫兹</label>
+			<label><input type="radio" name="q3" value="D">D. 斯涅尔</label>
+
+			<h3>选择题 4</h3>
+			<p>一个物体以20 m/s的速度经过10秒的加速度为2 m/s²的匀加速直线运动，它的位移是多少？</p>
+			<label><input type="radio" name="q4" value="A">A. 100 m</label>
+			<label><input type="radio" name="q4" value="B">B. 120 m</label>
+			<label><input type="radio" name="q4" value="C">C. 140 m</label>
+			<label><input type="radio" name="q4" value="D">D. 160 m</label>
+
+			<h3>选择题 5</h3>
+			<p>在电路中，电流是由哪个数学关系定义的？</p>
+			<label><input type="radio" name="q5" value="A">A. 电压除以电阻</label>
+			<label><input type="radio" name="q5" value="B">B. 电压乘以电阻</label>
+			<label><input type="radio" name="q5" value="C">C. 电压加上电阻</label>
+			<label><input type="radio" name="q5" value="D">D. 电压减去电阻</label>
+		</div>
+
+		<div class="question2">
+			<h3>判断题 1</h3>
+			<p>能量守恒定律表明，能量既不能被创造也不能被消灭，只能从一种形式转化为另一种形式。</p>
+			<label><input type="radio" name="q11" value="T">正确</label>
+			<label><input type="radio" name="q11" value="F">错误</label>
+
+      <h3>判断题 2</h3>
+			<p>牛顿第一定律也称为惯性定律，它表明物体在受力作用下始终保持静止状态。</p>
+			<label><input type="radio" name="q12" value="T">正确</label>
+			<label><input type="radio" name="q12" value="F">错误</label>
+
+			<h3>判断题 3</h3>
+			<p>弹簧振子的周期与弹簧的劲度系数成正比。</p>
+			<label><input type="radio" name="q13" value="T">正确</label>
+			<label><input type="radio" name="q13" value="F">错误</label>
+
+			<h3>判断题 4</h3>
+			<p>热量是热能的一种传递方式，物体的热量与其温度无关。</p>
+			<label><input type="radio" name="q14" value="T">正确</label>
+			<label><input type="radio" name="q14" value="F">错误</label>
+
+		</div>
+		</div>
+
+
+		<div class="question3">
+			<div class="question_content_dsc">
+				<h3>简答题 1</h3>
+			<p>什么是牛顿第二定律？请用公式来表达。</p>
+			<textarea name="q21" rows="4"></textarea>
+			</div>
+		</div>
+
+		<button class="btn" onclick="submitAnswers()" id = 'btn1'>提交</button>
+		<div class="result" id="result">
+			<h3>答案</h3>
+			<p>您选择的答案：</p>
+			<ul id="answers"></ul>
+      <p>正确答案为:</p>
+      <div id="trueAnswers"></div>
+      <p>得分为:</p>
+      <div id="score" class="score"></div>
+		</div>
+    
+	</div>
+	<script>
+		var score = 0
+			function addEventListenerOfMessage (cb) {
+			// 为window注册message事件并绑定监听函数
+			if (window.addEventListener) {
+					window.removeEventListener('message', cb, false)
+					window.addEventListener('message', cb, false)
+			} else if (window.attachEvent) { 
+					window.detachEvent('message', cb)
+					window.attachEvent('message', cb)
+			}
+		}
+		function submitAnswers() {
+			var answers = [];
+      const trueAnswerChose = ["C","C","D","B","A"];
+      const trueAnswerJudge = ["T","F","T","F"];
+			// 获取选择题答案
+			for (var i=0;i<trueAnswerChose.length;i++){
+        var q = document.getElementsByName(`q${i+1}`);
+        for (var j = 0; j < q.length; j++) {
+          if (q[j].checked) {
+            if (q[j].value==trueAnswerChose[i]){
+              score+=10
+            }
+            answers.push({
+              question: '选择题 '+(i+1),
+              answer: q[j].value
+            }); 
+          }
+        }
+      }
+
+			// 获取判断题答案
+			for (var i=0;i<trueAnswerJudge.length;i++){
+        var q = document.getElementsByName(`q1${i+1}`);
+        for (var j = 0; j < q.length; j++) {
+          if (q[j].checked) {
+            if (q[j].value==trueAnswerJudge[i]){
+              score+=10
+            }
+            answers.push({
+              question: '判断题 '+(i+1),
+              answer: q[j].value
+            });
+          }
+			}
+      }
+
+			// 获取简答题答案
+			var q21 = document.getElementsByName('q21')[0].value;
+			answers.push({
+				question: '简答题 1',
+				answer: q21
+			});
+
+			// 打印答案
+			var result = document.getElementById('result');
+			var answersList = document.getElementById('answers');
+			answersList.innerHTML = '';
+			for (var i = 0; i < answers.length; i++) {
+				var answer = answers[i];
+				var li = document.createElement('li');
+				li.innerHTML = answer.question + '：' + answer.answer;
+				answersList.appendChild(li);
+			}
+			result.style.display = 'block';
+      var a = document.getElementById("trueAnswers")
+      a.innerHTML = trueAnswerChose.concat(trueAnswerJudge)
+      var s = document.getElementById("score")
+      s.innerHTML = score
+      console.log("得分为：",score)
+		}
+
+		window.onload = ()=>{
+			const pageId = window.location.search.split('=')[1]
+      console.log(pageId)
+			document.getElementById('btn1').addEventListener('click',()=>{
+				window.parent.postMessage({
+					pageId:pageId,
+					type:'invokeCustomEvent',
+					content:{
+						msg:score
+					}
+				})
+			})
+		}
+	</script>
+</body>
+</html>
