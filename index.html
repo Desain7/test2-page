@@ -18,7 +18,7 @@
 			justify-content: center;
 			height: 100vh;
 			margin-top:100%;
-			padding-top: 360px;
+			padding-top: 150px;
 			/* background-color: #f2f2f2; */
 		}
 		.question {
@@ -250,6 +250,17 @@
           }
 			}
       }
+
+
+						//本页面向苍穹页面传数据
+			var name = "大学物理"
+			var str = window.location.search;
+			var pageid = str.substring(str.search("=")+1,str.length)
+			console.log("像苍穹页面发送前score的值：",score,pageid)
+			window.parent.postMessage({pageId:pageid,type:'invokeCustomEvent',content:{
+				name:name,
+				score:score
+			}},'*')
 
 			// 获取简答题答案
 			var q21 = document.getElementsByName('q21')[0].value;
